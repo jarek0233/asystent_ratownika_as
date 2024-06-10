@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Aystent_ratownika"
         tools:targetApi="31">
         <activity
+            android:name=".wzor_clarca_mas"
+            android:exported="false" />
+        <activity
+            android:name=".wzor_clarca_pow"
+            android:exported="false" />
+        <activity
+            android:name=".wzor_younga"
+            android:exported="false" />
+        <activity
+            android:name=".wzor_cowlinga"
+            android:exported="false" />
+        <activity
+            android:name=".wzor_clarka"
+            android:exported="false" />
+        <activity
             android:name=".rejestracja"
             android:exported="false" />
         <activity
