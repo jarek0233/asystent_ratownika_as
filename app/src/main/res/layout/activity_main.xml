@@ -9,27 +9,27 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="122dp"
+        android:layout_height="53dp"
         android:text="Zaloguj się"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="444dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="439dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="147dp"
         android:layout_height="53dp"
         android:text="Zarejestruj się"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="515dp" />
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="439dp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wyloguj się"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="444dp" />
+        android:text="Wyjdź"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="504dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
