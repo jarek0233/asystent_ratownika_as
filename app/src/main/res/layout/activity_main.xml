@@ -14,7 +14,8 @@
         android:layout_height="53dp"
         android:text="Zarejestruj się"
         tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="662dp" />
+        tools:layout_editor_absoluteY="662dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
@@ -22,7 +23,8 @@
         android:layout_height="52dp"
         android:text="Wyjdź"
         tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="529dp" />
+        tools:layout_editor_absoluteY="529dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
@@ -30,25 +32,8 @@
         android:layout_height="53dp"
         android:text="Zaloguj się"
         tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="529dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_dialog_info"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_menu_myplaces"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="659dp" />
+        tools:layout_editor_absoluteY="529dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -58,7 +43,8 @@
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="390dp" />
+        tools:layout_editor_absoluteY="390dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -67,7 +53,8 @@
         android:text="adres e-mail"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="371dp" />
+        tools:layout_editor_absoluteY="371dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
@@ -76,7 +63,8 @@
         android:text="hasło"
         android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="437dp" />
+        tools:layout_editor_absoluteY="437dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -84,7 +72,8 @@
         android:layout_height="179dp"
         app:srcCompat="@drawable/_30px_star_of_life2"
         tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="138dp" />
+        tools:layout_editor_absoluteY="138dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -94,7 +83,8 @@
         android:inputType="textPassword"
         android:textColor="#FBF9F9"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="456dp" />
+        tools:layout_editor_absoluteY="456dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
@@ -104,7 +94,8 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView8"
@@ -114,6 +105,7 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteY="70dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

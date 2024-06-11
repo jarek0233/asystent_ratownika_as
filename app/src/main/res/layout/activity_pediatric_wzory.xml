@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Wzór Clarka w oparciu o masą ciała dziecka"
         tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="220dp" />
+        tools:layout_editor_absoluteY="220dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button6"
@@ -22,7 +23,8 @@
         android:layout_height="wrap_content"
         android:text="Wzór Younga"
         tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="284dp" />
+        tools:layout_editor_absoluteY="284dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button8"
@@ -30,7 +32,8 @@
         android:layout_height="wrap_content"
         android:text="Wzór Clarka w oparciu o powierzchnię ciała dziecka"
         tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="346dp" />
+        tools:layout_editor_absoluteY="346dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button5"
@@ -38,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Wzór Cowlinga"
         tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="284dp" />
+        tools:layout_editor_absoluteY="284dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

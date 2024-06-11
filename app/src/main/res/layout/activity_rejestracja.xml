@@ -7,31 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".rejestracja">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_menu_myplaces"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="659dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_dialog_info"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="176dp"
         android:layout_height="176dp"
         app:srcCompat="@drawable/_30px_star_of_life2"
         tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="54dp" />
+        tools:layout_editor_absoluteY="54dp"
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -40,7 +23,8 @@
         android:ems="10"
         android:inputType="text"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="289dp" />
+        tools:layout_editor_absoluteY="289dp"
+        tools:ignore="Autofill,LabelFor,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -49,7 +33,8 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="353dp" />
+        tools:layout_editor_absoluteY="353dp"
+        tools:ignore="Autofill,LabelFor,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
@@ -58,16 +43,9 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="417dp" />
+        tools:layout_editor_absoluteY="417dp"
+        tools:ignore="Autofill,LabelFor,MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="483dp" />
 
     <Button
         android:id="@+id/button"
@@ -75,7 +53,8 @@
         android:layout_height="wrap_content"
         android:text="Zarejestruj się"
         tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="561dp" />
+        tools:layout_editor_absoluteY="561dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -83,7 +62,8 @@
         android:layout_height="wrap_content"
         android:text="Nazwa użytkownika"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="270dp" />
+        tools:layout_editor_absoluteY="270dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -91,7 +71,8 @@
         android:layout_height="wrap_content"
         android:text="Wprowadź hasło"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="334dp" />
+        tools:layout_editor_absoluteY="334dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView4"
@@ -99,7 +80,8 @@
         android:layout_height="wrap_content"
         android:text="Adres e-mail"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="398dp" />
+        tools:layout_editor_absoluteY="398dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -107,6 +89,7 @@
         android:layout_height="wrap_content"
         android:text="nr. telefonu"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="464dp" />
+        tools:layout_editor_absoluteY="464dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
