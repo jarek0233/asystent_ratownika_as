@@ -5,31 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FD0000"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="122dp"
-        android:layout_height="53dp"
-        android:text="Zaloguj się"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="439dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="147dp"
         android:layout_height="53dp"
         android:text="Zarejestruj się"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="439dp" />
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="662dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="97dp"
+        android:layout_height="52dp"
         android:text="Wyjdź"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="504dp" />
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="122dp"
+        android:layout_height="53dp"
+        android:text="Zaloguj się"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="529dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -49,13 +50,41 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="659dp" />
 
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adres e-mail"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hasło"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="437dp" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="209dp"
-        android:layout_height="206dp"
+        android:layout_width="178dp"
+        android:layout_height="179dp"
         app:srcCompat="@drawable/_30px_star_of_life2"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="138dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -63,32 +92,28 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="343dp" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="277dp" />
+        android:textColor="#FBF9F9"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="456dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="adres e-mail"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="258dp" />
+        android:id="@+id/textView7"
+        android:layout_width="144dp"
+        android:layout_height="54dp"
+        android:text="Asystent"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hasło"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="324dp" />
+        android:text="Ratownika"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="70dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
