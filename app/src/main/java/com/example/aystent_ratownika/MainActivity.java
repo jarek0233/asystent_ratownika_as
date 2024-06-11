@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
     Button registerButton;
     Button exitButton;
 
-    private static final String DB_URL = "jdbc:sqlserver://<51.75.53.42>:<1433>;databaseName=<login>";
-    private static final String DB_USER = "<sa>";
-    private static final String DB_PASSWORD = "<QlBnFa2020#>";
+    private static final String DB_URL = "jdbc:sqlserver://51.75.53.42:1433;databaseName=login";
+    private static final String DB_USER = "sa";
+    private static final String DB_PASSWORD = "QlBnFa2020##";
 
 
     @Override
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+@SuppressLint("StaticFieldLeak")
 private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String... params) {
@@ -114,13 +115,14 @@ private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
         }
 
         @Override
-
         protected void onPostExecute(Boolean result) {
             // Pokaż wiadomość za pomocą modułu Toast bazującą na wyniku walidacji loginu
             if (result) {
                 Toast.makeText(MainActivity.this, "Zalogowano pomyślnie", Toast.LENGTH_SHORT).show();
                 // Tutaj może stać kod która otwiera następną aktywność
-
+                Intent intent = new Intent(MainActivity.this, activity_menu.class);
+                startActivity(intent);
+                finish();
             } else {
                 Toast.makeText(MainActivity.this, "Niepoprawne dane logowania", Toast.LENGTH_SHORT).show();
             }
