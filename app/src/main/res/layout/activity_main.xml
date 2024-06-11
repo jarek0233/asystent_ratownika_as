@@ -15,7 +15,7 @@
         android:text="Zarejestruj się"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="662dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
         android:id="@+id/button4"
@@ -24,7 +24,7 @@
         android:text="Wyjdź"
         tools:layout_editor_absoluteX="213dp"
         tools:layout_editor_absoluteY="529dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
@@ -33,38 +33,19 @@
         android:text="Zaloguj się"
         tools:layout_editor_absoluteX="91dp"
         tools:layout_editor_absoluteY="529dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="60dp"
         android:ems="10"
+        android:hint="adres e-mail"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="390dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="adres e-mail"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="371dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hasło"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="437dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="359dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -73,18 +54,19 @@
         app:srcCompat="@drawable/_30px_star_of_life2"
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="138dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="269dp"
+        android:layout_height="59dp"
         android:ems="10"
+        android:hint="hasło"
         android:inputType="textPassword"
         android:textColor="#FBF9F9"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="456dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="439dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -95,7 +77,7 @@
         android:textSize="34sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView8"
@@ -106,6 +88,6 @@
         android:textSize="34sp"
         tools:layout_editor_absoluteX="121dp"
         tools:layout_editor_absoluteY="70dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
