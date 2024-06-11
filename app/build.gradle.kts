@@ -33,6 +33,8 @@ android {
 
 dependencies {
 
+    //noinspection UseTomlInstead
+    implementation("com.microsoft.sqlserver:mssql-jdbc:9.2.1.jre11")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
