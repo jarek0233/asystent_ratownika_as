@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.content.Intent;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
@@ -25,12 +24,9 @@ public class MainActivity extends AppCompatActivity {
     Button loginButton;
     Button registerButton;
     Button exitButton;
-
     private static final String DB_URL = "jdbc:sqlserver://51.75.53.42:1433;databaseName=login";
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "QlBnFa2020##";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,10 +67,6 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
     }
-
-
-
-@SuppressLint("StaticFieldLeak")
 private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String... params) {
@@ -107,7 +99,8 @@ private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
 
                 // Meldunek true, jeżeli dane logowania są poprawne
                 return count > 0;
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 e.printStackTrace();
                 // Meldunek false, jeśli wystąpi błąd
                 return false;
