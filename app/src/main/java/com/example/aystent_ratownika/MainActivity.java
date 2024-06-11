@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         registerButton.setOnClickLisener(v -> {
             // Skrypt do rejestracji
-            Toast.makeText(MainActivity.this, "Rejestracja", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(MainActivity.this, Rejestracja.class);
+           start.Activity(intent);
         });
 
         exitButton.setOnClickListener(v -> {
             finish();
         });
-
 
     }
 
