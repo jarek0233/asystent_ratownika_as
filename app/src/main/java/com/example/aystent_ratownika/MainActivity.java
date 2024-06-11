@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean validateLogin(String email, String password) {
-        // Prosta walidacja: sprawdzenie, czy pola nie są puste
+        // Prosta walidacja: sprawdzenie, czy pola nie są pusteee
         return !email.isEmpty() && !password.isEmpty();
     }
 }
