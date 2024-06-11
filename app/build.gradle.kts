@@ -1,7 +1,3 @@
-import org.gradle.internal.impldep.bsh.commands.dir
-
-
-
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -37,7 +33,8 @@ android {
 
 dependencies {
 
-
+    //noinspection UseTomlInstead
+    implementation("com.microsoft.sqlserver:mssql-jdbc:9.2.1.jre11")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -45,5 +42,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }
