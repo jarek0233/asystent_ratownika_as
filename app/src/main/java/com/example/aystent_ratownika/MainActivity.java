@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     EditText emailEditText;
     EditText passwordEditText;
-    button loginButton;
+    Button loginButton;
     Button registerButton;
     Button exitButton;
 
@@ -55,15 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        registerButton.setOnClickLisener(v -> {
+        registerButton.setOnClickListener(v -> {
             // Skrypt do rejestracji
            Intent intent = new Intent(MainActivity.this, Rejestracja.class);
            start.Activity(intent);
         });
 
-        exitButton.setOnClickListener(v -> {
-            finish();
-        });
+        exitButton.setOnClickListener(v -> finish());
 
     }
 
