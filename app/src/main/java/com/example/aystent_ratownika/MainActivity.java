@@ -55,6 +55,20 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        registerButton.setOnClickLisener(v -> {
+            // Skrypt do rejestracji
+            Toast.makeText(MainActivity.this, "Rejestracja", Toast.LENGTH_SHORT).show();
+        });
 
+        exitButton.setOnClickListener(v -> {
+            finish();
+        });
+
+
+    }
+
+    private boolean validateLogin(String email, String password) {
+        // Prosta walidacja: sprawdzenie, czy pola nie są puste
+        return !email.isEmpty() && !password.isEmpty();
     }
 }
