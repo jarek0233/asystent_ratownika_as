@@ -2,12 +2,10 @@ package com.example.aystent_ratownika;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -17,6 +15,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailEditText;
@@ -27,20 +26,17 @@ public class MainActivity extends AppCompatActivity {
     private static final String DB_URL = "jdbc:sqlserver://51.75.53.42:1433;databaseName=login";
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "QlBnFa2020##";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        EdgeToEdge.enable(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
-
         });
-
 
         emailEditText = findViewById(R.id.editTextTextEmailAddress);
         passwordEditText = findViewById(R.id.editTextTextPassword);
@@ -55,64 +51,69 @@ public class MainActivity extends AppCompatActivity {
             new ValidateLoginTask().execute(email, password);
         });
 
-
         registerButton.setOnClickListener(v -> {
-            // Startuj aktywność rejestracji
             Intent intent = new Intent(MainActivity.this, rejestracja.class);
             startActivity(intent);
         });
 
-        exitButton.setOnClickListener(v -> {
-            // Zamknij  aktualną aktywność
-            finish();
-        });
+        exitButton.setOnClickListener(v -> finish());
     }
-private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
+
+    private class ValidateLoginTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String... params) {
-            // Sprawdź dostarczone parametry (e-Mail i Hasło)
-
             String email = params[0];
             String password = params[1];
+
+            Connection connection = null;
+            PreparedStatement statement = null;
+            ResultSet resultSet = null;
 
             try {
                 // Załaduj sterownik JDBC
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
                 // Połączenie się z bazą danych
-                Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
                 // Zrób SQL-Inquiry do weryfikowania loginu
                 String query = "SELECT COUNT(*) FROM login WHERE login = ? AND haslo = ?";
-                PreparedStatement statement = connection.prepareStatement(query);
+                statement = connection.prepareStatement(query);
                 statement.setString(1, email);
                 statement.setString(2, password);
 
                 // Uruchom skrypt SQL i pobierz resultat
-                ResultSet resultSet = statement.executeQuery();
+                resultSet = statement.executeQuery();
                 resultSet.next();
                 int count = resultSet.getInt(1);
 
-                // Zamknij zasoby
-                resultSet.close();
-                statement.close();
-                connection.close();
-
                 // Meldunek true, jeżeli dane logowania są poprawne
                 return count > 0;
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 // Meldunek false, jeśli wystąpi błąd
                 return false;
+            } finally {
+                try {
+                    if (resultSet != null) {
+                        resultSet.close();
+                    }
+                    if (statement != null) {
+                        statement.close();
+                    }
+                    if (connection != null) {
+                        connection.close();
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
         @Override
         protected void onPostExecute(Boolean result) {
-            // Pokaż wiadomość za pomocą modułu Toast bazującą na wyniku walidacji loginu
             if (result) {
                 Toast.makeText(MainActivity.this, "Zalogowano pomyślnie", Toast.LENGTH_SHORT).show();
-                // Tutaj może stać kod która otwiera następną aktywność
                 Intent intent = new Intent(MainActivity.this, activity_menu.class);
                 startActivity(intent);
                 finish();
